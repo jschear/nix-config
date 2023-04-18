@@ -34,9 +34,6 @@ alias gs='git status'
 alias gp='git pull'
 alias submodules='git pull && git submodule update --init --recursive'
 
-# VSCode as default editor
-# export EDITOR="code -w"
-
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 jdk() {
@@ -61,9 +58,3 @@ prompt pure
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Nix
-. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-
-# direnv
-eval "$(direnv hook zsh)"
