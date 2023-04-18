@@ -8,6 +8,7 @@ Notes:
 - Slightly preference for bringing along old dotfiles vs. moving config into the nix language.
 
 TODO:
+- zsh configuration
 - VSCode
 - Template flake for development environments
 - https://github.com/nix-community/home-manager/issues/1341

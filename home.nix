@@ -40,6 +40,7 @@
     git
     alacritty
     tmux
+    zsh
 
     bat
     jq
@@ -66,6 +67,9 @@
     ".gitconfig".source = dotfiles/.gitconfig;
     ".alacritty.yml".source = dotfiles/.alacritty.yml;
     ".tmux.conf".source = dotfiles/.tmux.conf;
+
+    # TODO move this config into nix
+    ".zshrc".source = dotfiles/.zshrc;
   };
 
   # You can also manage environment variables but you will have to manually
@@ -79,9 +83,15 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "code -w";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.direnv.enable = true;
+  programs.direnv.enableZshIntegration = true;
+
+  # https://github.com/nix-community/nix-direnv
+  programs.direnv.nix-direnv.enable = true;
 }
