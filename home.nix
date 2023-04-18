@@ -42,7 +42,6 @@
     bat
     jq
     tree
-    fzf
 
     flyctl
   ];
@@ -94,5 +93,15 @@
   programs.zsh = {
     enable = true;
     initExtra = builtins.readFile ./dotfiles/.zshrc;
+    shellAliases = {
+      cat = "bat";
+    };
+  };
+
+  programs.fzf = {
+    enable = true;
+  };
+  programs.zoxide = {
+    enable = true;
   };
 }
