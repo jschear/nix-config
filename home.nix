@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # https://github.com/nix-community/home-manager/issues/2942
-  nixpkgs.config.allowUnfreePredicate = (pkg: true);
-
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jschear";
@@ -89,9 +86,11 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.direnv.enable = true;
-  programs.direnv.enableZshIntegration = true;
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
 
-  # https://github.com/nix-community/nix-direnv
-  programs.direnv.nix-direnv.enable = true;
+    # https://github.com/nix-community/nix-direnv
+    nix-direnv.enable = true;
+  };
 }
