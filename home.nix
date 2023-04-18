@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  # https://github.com/nix-community/home-manager/issues/2942
+  nixpkgs.config.allowUnfreePredicate = (pkg: true);
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jschear";
@@ -35,11 +38,15 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     git
-    bat
-    tmux
-    jq
     alacritty
+    tmux
+
+    bat
+    jq
     tree
+    fzf
+
+    flyctl
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

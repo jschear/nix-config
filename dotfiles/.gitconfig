@@ -14,10 +14,10 @@
 [help]
 	autocorrect = 10
 [color]
-  branch = auto
-  diff = auto
-  status = always
-  ui = true
+	branch = auto
+	diff = auto
+	status = always
+	ui = true
 [pull]
 	rebase = true
 [rebase]
