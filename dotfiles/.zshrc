@@ -48,7 +48,7 @@ jdk() {
 # Android
 export ANDROID_HOME=/Users/jschear/Library/Android/sdk
 
-# Add pure to fpash
+# Add pure to fpath
 fpath+=$HOME/.zsh/pure
 
 # Load prompt
