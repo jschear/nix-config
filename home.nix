@@ -36,8 +36,6 @@
     # '')
     git
     alacritty
-    tmux
-    zsh
 
     bat
     jq
@@ -62,7 +60,6 @@
 
     ".gitconfig".source = dotfiles/.gitconfig;
     ".alacritty.yml".source = dotfiles/.alacritty.yml;
-    ".tmux.conf".source = dotfiles/.tmux.conf;
   };
 
   # You can also manage environment variables but you will have to manually
@@ -79,29 +76,33 @@
     EDITOR = "code -w";
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs = {
+    # Let Home Manager install and manage itself.
+    home-manager.enable = true;
 
-  programs.direnv = {
-    enable = true;
-    enableZshIntegration = true;
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
 
-    # https://github.com/nix-community/nix-direnv
-    nix-direnv.enable = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-    initExtra = builtins.readFile ./dotfiles/.zshrc;
-    shellAliases = {
-      cat = "bat";
+      # https://github.com/nix-community/nix-direnv
+      nix-direnv.enable = true;
     };
-  };
 
-  programs.fzf = {
-    enable = true;
-  };
-  programs.zoxide = {
-    enable = true;
+    zsh = {
+      enable = true;
+      initExtra = builtins.readFile ./dotfiles/.zshrc;
+      shellAliases = {
+        cat = "bat";
+      };
+    };
+
+    fzf.enable = true;
+    zoxide.enable = true;
+
+    tmux = {
+      enable = true;
+      extraConfig = builtins.readFile ./dotfiles/.tmux.conf;
+      terminal = "screen-256color";
+    };
   };
 }
