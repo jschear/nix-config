@@ -3,6 +3,7 @@
 	email = jonathanschear@gmail.com
 [push]
 	default = current
+	autoSetupRemote = true
 [alias]
 	uncommit = reset --soft HEAD^
 	s = status --short --branch

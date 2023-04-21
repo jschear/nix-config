@@ -21,7 +21,7 @@ bindkey "^[[B" history-beginning-search-forward-end
 
 ## Aliases
 # Colorize
-alias ls='ls -G'
+alias ls='ls -GF'
 
 # xcode
 alias clean-dd="rm -rf /Users/jschear/Library/Developer/Xcode/DerivedData"
