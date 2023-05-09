@@ -25,5 +25,12 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
       };
+
+      templates = {
+        rust = {
+          path = ./templates/rust;
+          description = "Rust dev environment template.";
+        };
+      };
     };
 }
