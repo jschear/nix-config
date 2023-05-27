@@ -35,6 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     git
+    gh
     alacritty
 
     bat

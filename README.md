@@ -11,6 +11,4 @@ TODO:
 - Move .zsh/pure config into here
 - zsh configuration
 - VSCode
-- Template flake for development environments
 - https://github.com/nix-community/home-manager/issues/1341
-- direnv
