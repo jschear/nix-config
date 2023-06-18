@@ -41,6 +41,8 @@
     bat
     jq
     tree
+    silver-searcher
+    entr
 
     flyctl
   ];
