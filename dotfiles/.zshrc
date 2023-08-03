@@ -1,13 +1,11 @@
 export PATH=/Users/jschear/Library/Android/sdk/cmdline-tools/latest/bin:\
 /Users/jschear/Library/Android/sdk/platform-tools:\
 /Users/jschear/bin:\
+/Users/jschear/.deno/bin:\
 $PATH
 
 # Garmin connect SDK
 export PATH=$PATH:`cat $HOME/Library/Application\ Support/Garmin/ConnectIQ/current-sdk.cfg`/bin
-
-# nand2tetris
-export PATH=$PATH:/Users/jschear/dev/nand2tetris/tools
 
 # Enable autocompletion
 autoload -Uz compinit && compinit
@@ -42,19 +40,10 @@ jdk() {
   java -version
 }
 
-# Android
-export ANDROID_HOME=/Users/jschear/Library/Android/sdk
-
-# Add pure to fpath
-fpath+=$HOME/.zsh/pure
-
-# Load prompt
-autoload -U promptinit; promptinit
-prompt pure
-
-# opam configuration
+# opam
 [[ ! -r /Users/jschear/.opam/opam-init/init.zsh ]] || source /Users/jschear/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
+# NVM/node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

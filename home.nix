@@ -37,14 +37,15 @@
     git
     gh
     alacritty
-
+    nil
     bat
     jq
     tree
     silver-searcher
     entr
-
+    hyperfine
     flyctl
+    deno
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -76,7 +77,7 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    EDITOR = "code -w";
+    EDITOR = "code";
   };
 
   programs = {
@@ -97,6 +98,19 @@
       shellAliases = {
         cat = "bat";
       };
+      syntaxHighlighting.enable = true;
+      plugins = [
+        # Pure prompt
+        {
+          name = "pure";
+          src = pkgs.fetchFromGitHub {
+            owner = "sindresorhus";
+            repo = "pure";
+            rev = "v1.22.0";
+            sha256 = "TR4CyBZ+KoZRs9XDmWE5lJuUXXU1J8E2Z63nt+FS+5w=";
+          };
+        }
+      ];
     };
 
     fzf.enable = true;

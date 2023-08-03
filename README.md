@@ -1,14 +1,14 @@
 # nix-config
-Nix configuration.
+Nix home-manager configuration.
 
 Notes:
 - Using home-manager.
 - Only attempting to run on darwin for now.
 - Not using `nix-darwin` for now.
-- Slightly preference for bringing along old dotfiles vs. moving config into the nix language.
+- Slight preference for bringing along old dotfiles vs. moving config into the nix language.
+- Don't try to manage frequently edited config files with nix.
 
 TODO:
-- Move .zsh/pure config into here
-- zsh configuration
+- opam?
 - VSCode
-- https://github.com/nix-community/home-manager/issues/1341
+- Linking graphical applications into /Applications? https://github.com/nix-community/home-manager/issues/1341
