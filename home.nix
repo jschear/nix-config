@@ -42,10 +42,13 @@
     jq
     tree
     silver-searcher
+    ripgrep
     entr
     hyperfine
     flyctl
     deno
+    tealdeer
+    rustup # most projects use flakes, but having a rust dev env is nice for one-off projects
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -63,7 +66,7 @@
     # '';
 
     ".gitconfig".source = dotfiles/.gitconfig;
-    ".alacritty.yml".source = dotfiles/.alacritty.yml;
+    ".alacritty.toml".source = dotfiles/.alacritty.toml;
   };
 
   # You can also manage environment variables but you will have to manually

@@ -7,6 +7,10 @@ $PATH
 # Garmin connect SDK
 export PATH=$PATH:`cat $HOME/Library/Application\ Support/Garmin/ConnectIQ/current-sdk.cfg`/bin
 
+# Add Visual Studio Code (code)
+# Someday we'll install this with nix.
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Enable autocompletion
 autoload -Uz compinit && compinit
 
