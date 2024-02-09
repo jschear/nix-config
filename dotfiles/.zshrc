@@ -1,11 +1,12 @@
-export PATH=/Users/jschear/Library/Android/sdk/cmdline-tools/latest/bin:\
-/Users/jschear/Library/Android/sdk/platform-tools:\
-/Users/jschear/bin:\
-/Users/jschear/.deno/bin:\
+export PATH=$HOME/Library/Android/sdk/cmdline-tools/latest/bin:\
+$HOME/Library/Android/sdk/platform-tools:\
+$HOME/jschear/bin:\
+$HOME/.deno/bin:\
+$HOME/.cargo/bin:\
 $PATH
 
 # Garmin connect SDK
-export PATH=$PATH:`cat $HOME/Library/Application\ Support/Garmin/ConnectIQ/current-sdk.cfg`/bin
+export PATH=$PATH:$(cat $HOME/Library/Application\ Support/Garmin/ConnectIQ/current-sdk.cfg)bin
 
 # Add Visual Studio Code (code)
 # Someday we'll install this with nix.
@@ -26,7 +27,7 @@ bindkey "^[[B" history-beginning-search-forward-end
 alias ls='ls -GF'
 
 # xcode
-alias clean-dd="rm -rf /Users/jschear/Library/Developer/Xcode/DerivedData"
+alias clean-dd="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
 
 # gradle
 alias gw='./gradlew'
@@ -45,7 +46,7 @@ jdk() {
 }
 
 # opam
-[[ ! -r /Users/jschear/.opam/opam-init/init.zsh ]] || source /Users/jschear/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # NVM/node
 export NVM_DIR="$HOME/.nvm"
