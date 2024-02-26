@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  modular-cli = (pkgs.callPackage ./modules/modularCli.nix { });
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -17,7 +20,8 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
+
+  home.packages = (with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -49,6 +53,8 @@
     deno
     tealdeer
     rustup # most projects use flakes, but having a rust dev env is nice for one-off projects
+  ]) ++ [
+    modular-cli
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -80,12 +86,14 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    EDITOR = "code";
+    EDITOR = "code --wait";
   };
 
   programs = {
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
+
+    opam.enable = true;
 
     direnv = {
       enable = true;

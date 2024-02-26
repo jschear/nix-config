@@ -9,6 +9,5 @@ Notes:
 - Don't try to manage frequently edited config files with nix.
 
 TODO:
-- opam?
 - VSCode
 - Linking graphical applications into /Applications? https://github.com/nix-community/home-manager/issues/1341

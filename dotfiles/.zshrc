@@ -46,7 +46,7 @@ jdk() {
 }
 
 # opam
-[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+# [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # NVM/node
 export NVM_DIR="$HOME/.nvm"
