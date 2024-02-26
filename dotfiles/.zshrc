@@ -1,9 +1,6 @@
-export PATH=$HOME/Library/Android/sdk/cmdline-tools/latest/bin:\
-$HOME/Library/Android/sdk/platform-tools:\
-$HOME/jschear/bin:\
-$HOME/.deno/bin:\
-$HOME/.cargo/bin:\
-$PATH
+export PATH=$HOME/Library/Android/sdk/cmdline-tools/latest/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/bin:$HOME/.deno/bin:$HOME/.cargo/bin:$HOME/.modular/pkg/packages.modular.com_mojo/bin:$PATH
+
+export MODULAR_HOME="$HOME/.modular"
 
 # Garmin connect SDK
 export PATH=$PATH:$(cat $HOME/Library/Application\ Support/Garmin/ConnectIQ/current-sdk.cfg)bin
@@ -41,7 +38,7 @@ alias submodules='git pull && git submodule update --init --recursive'
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 jdk() {
   version=$1
-  export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+  export JAVA_HOME=$(/usr/libexec/java_home -v"$version")
   java -version
 }
 
@@ -50,5 +47,5 @@ jdk() {
 
 # NVM/node
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
