@@ -1,31 +1,44 @@
 [user]
-	name = Jonathan Schear
-	email = jonathanschear@gmail.com
+name = Jonathan Schear
+email = jschear@jschear.dev
+signingkey = 0F4D841667534076
+
+[commit]
+gpgsign = true
+
 [push]
-	default = current
-	autoSetupRemote = true
+default = current
+autoSetupRemote = true
+
 [alias]
-	uncommit = reset --soft HEAD^
-	s = status --short --branch
-	st = status
-	co = checkout
-	new = checkout -b
-	kick = commit -m "Kick" --allow-empty
-	recent = !git branch --sort=-committerdate | fzf +s | xargs git checkout
+uncommit = reset --soft HEAD^
+s = status --short --branch
+st = status
+co = checkout
+new = checkout -b
+kick = commit -m "Kick" --allow-empty
+recent = !git branch --sort=-committerdate | fzf +s | xargs git checkout
+
 [help]
-	autocorrect = 10
+autocorrect = 10
+
 [color]
-	branch = auto
-	diff = auto
-	status = always
-	ui = true
+branch = auto
+diff = auto
+status = always
+ui = true
+
 [pull]
-	rebase = true
+rebase = true
+
 [rebase]
-	autoStash = true
+autoStash = true
+
 [init]
-	defaultBranch = main
+defaultBranch = main
+
 [merge]
-	conflictstyle = diff3
+conflictstyle = diff3
+
 [credential]
-	helper = osxkeychain
+helper = osxkeychain

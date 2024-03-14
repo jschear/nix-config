@@ -39,9 +39,11 @@ in
     #   echo "Hello, ${config.home.username}!"
     # '')
     git
+    gnupg
     gh
     alacritty
     nil
+    nixpkgs-fmt
     bat
     jq
     tree
