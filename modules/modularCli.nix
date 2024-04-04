@@ -4,11 +4,11 @@
 # Also needed to manually copy a bootstrap.json file from etc/modular to ~/.modular (see https://github.com/modularml/mojo/issues/1090)
 stdenv.mkDerivation rec {
   name = "modular-cli";
-  version = "0.5.0";
+  version = "0.6.0";
 
   src = fetchurl {
     url = "https://dl.modular.com/public/installer/raw/names/modular-mac-arm64/versions/latest/modular-v${version}-macos-arm64.tar.gz";
-    sha256 = "sha256-ytTDY81J5RVMMY/9+So/V153BJX2hkxAVQfCAOUTBgM=";
+    sha256 = "sha256-I02dRyQL8UBqjg7fhHLNHCSefvh9vc76cVrz8VgzMGk=";
   };
 
   # Avoids a check that requires there be only a single dir in the root of the tarball

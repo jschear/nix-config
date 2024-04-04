@@ -49,6 +49,7 @@ in
     tree
     silver-searcher
     ripgrep
+    neovim
     entr
     hyperfine
     flyctl
