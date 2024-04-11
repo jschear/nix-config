@@ -4,47 +4,11 @@ size = 15
 [font.normal]
 family = "JetBrains Mono"
 
-[[keyboard.bindings]]
-key = "Comma"
-mods = "Command"
-
-[keyboard.bindings.command]
-args = ["-c", "open ~/.config/alacritty/alacritty.yml"]
-program = "sh"
-
-[[keyboard.bindings]]
-action = "SpawnNewInstance"
-key = "N"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = " "
-key = "Space"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u0015"
-key = "Back"
-mods = "Super"
-
-[[keyboard.bindings]]
-chars = "\u001Bb"
-key = "Left"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001Bf"
-key = "Right"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001BOH"
-key = "Left"
-mode = "AppCursor"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001BOF"
-key = "Right"
-mode = "AppCursor"
-mods = "Command"
+[keyboard]
+bindings = [
+  { key = "ArrowLeft", mods = "Option", chars = "\u001bb" },    # Jump left a word
+  { key = "ArrowRight", mods = "Option", chars = "\u001bf" },   # Jump right a word
+  { key = "ArrowLeft", mods = "Command", chars = "\u001bOH" },  # Start of line
+  { key = "ArrowRight", mods = "Command", chars = "\u001bOF" }, # End of line
+  { key = "Backspace", mods = "Command", chars = "\u0015" },    # Delete line
+]
